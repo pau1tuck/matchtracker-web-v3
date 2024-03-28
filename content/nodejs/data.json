@@ -1,0 +1,29 @@
+{
+    "subject": "Node.js",
+    "section": "Built-in Modules",
+    "chapter": "Managing Concurrency in Node.js",
+    "order": 1,
+    "difficulty": "2 - mid [junior,mid,senior,lead]",
+    "content": [
+        {
+            "type": "text",
+            "value": "React is a JavaScript library for building user interfaces."
+        },
+        {
+            "title": "Child Threads",
+            "type": "quiz",
+            "question": "How does Node.js handle child threads?",
+            "options": [
+                "Node.js does not support child threads.",
+                "Node.js supports child threads and runs all of them in a single thread using the \"child_threads\" module.",
+                "Node.js can create child threads for expensive tasks using the \"worker_threads\" module.",
+                "Node.js runs every module in a separate thread."
+            ],
+            "correctAnswer": 3,
+            "explanation": "While Node.js primarily runs in a single thread, it can spawn child threads for computationally expensive tasks using the **`worker_threads`** module. These worker threads are able to run tasks concurrently, which can improve the performance of CPU-intensive operations. <br /> However, these are a bit more complex to manage, as they can create issues such as race conditions. It's important to note that it's often better to use Node.js's non-blocking I/O operations to handle asynchronous operations, and leave computationally expensive tasks to be handled by systems designed to handle such tasks."
+        }
+    ],
+    "tags": ["nodejs", "concurrency"],
+    "dateAdded": "2024-03-18T16:57:34.000+07:00",
+    "dateModified": "2024-03-19T20:32:59.000+07:00"
+}

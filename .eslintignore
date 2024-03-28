@@ -1,0 +1,6 @@
+node_modules
+out
+.archive
+tailwind.config.ts
+!.storybook
+playwright.config.ts

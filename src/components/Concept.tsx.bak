@@ -1,0 +1,43 @@
+// Mark the component as client-side
+'use client';
+
+import { Accordion, AccordionPanel } from 'flowbite-react';
+import { useState } from 'react';
+
+// Define a type for the props
+interface QuizComponentProps {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+  explanation: string;
+}
+
+const QuizComponent: React.FC<QuizComponentProps> = ({ question, options, correctAnswer, explanation }) => {
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [showExplanation, setShowExplanation] = useState<boolean>(false);
+
+  const handleOptionSelect = (option: string) => {
+    setSelectedOption(option);
+    setShowExplanation(true);
+  };
+
+  return (
+    <div>
+      <h2>{question}</h2>
+      <div>
+        {options.map((option, index) => (
+          <button key={index} onClick={() => handleOptionSelect(option)}>
+            {option}
+          </button>
+        ))}
+      </div>
+      {showExplanation && (
+        <Accordion>
+          <AccordionPanel>{explanation}</AccordionPanel>
+        </Accordion>
+      )}
+    </div>
+  );
+};
+
+export default QuizComponent;
