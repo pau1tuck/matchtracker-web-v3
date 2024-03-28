@@ -8,7 +8,7 @@
         "sign_up_link": "Sign up"
     },
     "BaseTemplate": {
-        "description": "Delivering the finest new underground house and techno.",
+        "description": "Football Fixtures",
         "made_with": "Made with Python Django, PostgreSQL, and Next.js."
     },
     "Index": {

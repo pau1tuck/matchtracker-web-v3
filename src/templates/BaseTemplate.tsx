@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-import { AppConfig } from "@/utils/AppConfig";
+import { AppConfig } from "@/libs/AppConfig";
 
 const BaseTemplate = (props: {
     leftNav: React.ReactNode;
